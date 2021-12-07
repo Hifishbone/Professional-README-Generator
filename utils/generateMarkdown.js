@@ -36,7 +36,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   return `## License
 
-    This project is licensed under the ${renderLicenseLink(license)}.
+This project is licensed under the ${renderLicenseLink(license)}.
 
 `;
 }
@@ -55,7 +55,7 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
 ## Description
 
-    ${data.description.replaceAll('\n', '\n    ')}
+${data.description}
 
 
 ## Table of Contents
@@ -70,29 +70,30 @@ ${renderLicenseInTableContent(data.license)}
 
 ## Installation
     
-    ${data.installation.replaceAll('\n', '\n    ')}
+${data.installation}
 
 
 ## Usage
     
-    ${data.usage.replaceAll('\n', '\n    ')}
+${data.usage}
 
 
 ## Contributing
-    
-    ${data.contributing.replaceAll('\n', '\n    ')}
+
+${data.contributing}
 
 
 ## Tests
     
-    ${data.tests.replaceAll('\n', '\n    ')}
+${data.tests}
 
 ${renderLicenseSection(data.license)}
 
 ## Questions
 
-    You can reach me at [GitHub](https://github.com/${data.username})
-    You can also email me: <${data.email}>
+You can reach me at [GitHub](https://github.com/${data.username})
+
+You can also email me: <${data.email}>
 `;
 }
 
